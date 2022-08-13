@@ -4,12 +4,11 @@ import EditTodo from './EditTodo'
 
 export default function TodoList() {
   return (
-    <>
-      <h1>Hi from TodoList</h1>
+    <div className='todoList'>
       <Todo />
       <Todo />
       <Todo />
       <EditTodo />
-    </>
+    </div>
   )
 }
