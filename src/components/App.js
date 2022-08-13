@@ -5,10 +5,10 @@ import NewTodo from './NewTodo'
 
 export default function App() {
   return (
-    <>
+    <div class='app'>
       <Header />
       <TodoList />
       <NewTodo />
-    </>
+    </div>
   )
 }
