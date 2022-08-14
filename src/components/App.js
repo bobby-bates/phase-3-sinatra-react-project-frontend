@@ -32,11 +32,16 @@ export default function App() {
   console.log('categories:', categories)
 
   const handleAddTodo = newTodo => setTodos([...todos, newTodo])
+  
+  const handleUpdateTodo = updatedTodo => {
+    // TODO: Find todo in state to update
+    setTodos([...todos, updatedTodo])
+  }
 
   return (
     <div className='app'>
       <Header />
-      <TodoList todos={todos} categories={categories} />
+      <TodoList todos={todos} categories={categories} onUpdateTodo={handleUpdateTodo} />
       <NewTodo todos={todos} categories={categories} onAddTodo={handleAddTodo} />
     </div>
   )
