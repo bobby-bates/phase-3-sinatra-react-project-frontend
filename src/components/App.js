@@ -35,7 +35,7 @@ export default function App() {
     <div className='app'>
       <Header />
       <TodoList todos={todos} categories={categories} />
-      <NewTodo />
+      <NewTodo todos={todos} categories={categories} />
     </div>
   )
 }

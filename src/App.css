@@ -8,11 +8,20 @@
   background: darkgray;
 }
 
-.todoList {
+.todo-list {
   background: gray;
 }
 
 .todo {
   background: slategray;
   /* padding: 1rem 0; */
+}
+
+.todo#todo-body {
+  /* margin-top: 0.5rem; */
+}
+
+.new-todo {
+  background: cyan;
+  padding: 0.5rem 0;
 }

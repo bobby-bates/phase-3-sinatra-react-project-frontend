@@ -4,8 +4,8 @@ export default function Todo({ todo, categories }) {
   // debugger
   return (
     <div className='todo'>
-      <p>{todo.body}</p>
-      <p>Category: {categories[todo.category_id - 1].name}</p>
+      <p id='todo-body'>{todo.body}</p>
+      <p id='todo-category'>Category: {categories[todo.category_id - 1].name}</p>
     </div>
   )
 }

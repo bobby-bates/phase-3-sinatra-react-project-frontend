@@ -7,7 +7,7 @@ export default function TodoList({ todos, categories }) {
   )
 
   return (
-    <div className='todoList'>
+    <div className='todo-list'>
       {todoBuilder}
     </div>
   )
