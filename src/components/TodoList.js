@@ -1,4 +1,3 @@
-import React from 'react'
 import Todo from './Todo'
 
 export default function TodoList({
@@ -7,7 +6,7 @@ export default function TodoList({
   onEditTodo,
   onDeleteTodo
 }) {
-  // debugger
+
   const buildTodos = todos.map((todo, index) =>
     <Todo
       key={todo+index}

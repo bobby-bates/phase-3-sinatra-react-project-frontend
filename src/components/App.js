@@ -28,9 +28,6 @@ export default function App() {
       })
     }, [])
 
-  console.log('todos:', todos)
-  console.log('categories:', categories)
-
   const handleAddTodo = newTodo => setTodos([...todos, newTodo])
   
   const handleEditTodo = updatedTodo => {

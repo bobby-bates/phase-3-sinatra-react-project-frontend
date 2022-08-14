@@ -12,8 +12,6 @@ export default function EditTodo({ todo, onEditTodo }) {
     })
       .then(r => r.json())
       .then(updatedTodo => {
-        // debugger
-        // Update the todo list state in App.js:
         onEditTodo(updatedTodo)
         // NOTE: editTodoBody is already updated, no need to reset form
       })

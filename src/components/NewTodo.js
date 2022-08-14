@@ -4,17 +4,14 @@ export default function NewTodo({ todos, categories, onAddTodo }) {
   const [newTodoBody, setNewTodoBody] = useState('')
   const [newTodoCategory, setNewTodoCategory] = useState('')
 
-  // NOTE: Not sure why onChange needs to pass categories into this
-  // function rather than just calling categories.
+  // NOTE: Not sure atm why onChange needs to pass categories into this
+  // function rather than just calling categories on line 3.
   const handleCategoryChange = e => {
     setNewTodoCategory(categories.find(cat => cat.name === e.target.value))
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-
-    console.log('newTodoBody:', newTodoBody)
-    console.log('newTodoCategory', newTodoCategory)
 
     fetch('http://localhost:9292/todos', {
       method: 'POST',
