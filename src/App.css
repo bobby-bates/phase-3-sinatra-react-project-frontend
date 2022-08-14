@@ -1,3 +1,7 @@
+body {
+  align-items: center;
+}
+
 .app {
   text-align: center;
   background: lightgray;
@@ -21,7 +25,16 @@
   /* margin-top: 0.5rem; */
 }
 
-.new-todo {
+.new-todo-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /* width: 50%; */
   background: cyan;
   padding: 0.5rem 0;
+}
+
+.new-todo-form-child {
+  /* flex: 0 0 50%; */
+  width: 50%;
 }

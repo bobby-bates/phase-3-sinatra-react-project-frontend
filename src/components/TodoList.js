@@ -2,13 +2,13 @@ import React from 'react'
 import Todo from './Todo'
 
 export default function TodoList({ todos, categories }) {
-  const todoBuilder = todos.map((todo, index) =>
+  const buildTodos = todos.map((todo, index) =>
     <Todo key={todo+index} todo={todo} categories={categories} />
   )
 
   return (
     <div className='todo-list'>
-      {todoBuilder}
+      {buildTodos}
     </div>
   )
 }

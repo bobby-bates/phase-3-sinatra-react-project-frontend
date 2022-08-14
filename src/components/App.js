@@ -31,11 +31,13 @@ export default function App() {
   console.log('todos:', todos)
   console.log('categories:', categories)
 
+  const handleAddTodo = newTodo => setTodos([todos, newTodo])
+
   return (
     <div className='app'>
       <Header />
       <TodoList todos={todos} categories={categories} />
-      <NewTodo todos={todos} categories={categories} />
+      <NewTodo todos={todos} categories={categories} onAddTodo={handleAddTodo} />
     </div>
   )
 }
