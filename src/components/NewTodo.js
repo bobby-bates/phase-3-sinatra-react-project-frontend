@@ -25,8 +25,8 @@ export default function NewTodo({ todos, categories, onAddTodo}) {
     })
       .then(r => r.json())
       .then(newTodo => {
-        debugger
-      // Update the todo list state:
+        // debugger
+      // Update the todo list state in App.js:
         onAddTodo(newTodo)
       // Reset form:
         setNewTodoText('')
