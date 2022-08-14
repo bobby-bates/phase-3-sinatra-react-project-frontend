@@ -34,7 +34,7 @@ export default function App() {
   return (
     <div className='app'>
       <Header />
-      <TodoList />
+      <TodoList todos={todos} categories={categories} />
       <NewTodo />
     </div>
   )

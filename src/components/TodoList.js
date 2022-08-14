@@ -1,14 +1,14 @@
 import React from 'react'
 import Todo from './Todo'
-import EditTodo from './EditTodo'
 
-export default function TodoList() {
+export default function TodoList({ todos, categories }) {
+  const todoBuilder = todos.map((todo, index) =>
+    <Todo key={todo+index} todo={todo} categories={categories} />
+  )
+
   return (
     <div className='todoList'>
-      <Todo />
-      <Todo />
-      <Todo />
-      <EditTodo />
+      {todoBuilder}
     </div>
   )
 }

@@ -11,3 +11,8 @@
 .todoList {
   background: gray;
 }
+
+.todo {
+  background: slategray;
+  /* padding: 1rem 0; */
+}
