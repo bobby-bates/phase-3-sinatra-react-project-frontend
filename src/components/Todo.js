@@ -1,20 +1,16 @@
 import { useState } from 'react'
 import EditTodo from './EditTodo'
 
-export default function Todo({ todo, categories, onEditTodo }) {
+export default function Todo({ todo, categories, onDeleteTodo, onEditTodo }) {
   const [isEditing, setIsEditing] = useState(false)
-  // debugger
-  // const handleEditTodo = (props) => {
-  //   debugger
-  //   setIsEditing(false)
-  //   // onEditTodo(updatedTodo)
-  // }
 
-  // function handleEditTodo(updatedTodo, onEditTodo) {
-  //   setIsEditing(false)
-  //   debugger
-  //   onEditTodo(updatedTodo)
-  // }
+  const handleDeleteClick = () => {
+    fetch(`http://localhost:9292/todos/${todo.id}`, {
+      method: 'DELETE'
+    })
+
+    onDeleteTodo(todo.id)
+  }
 
   return (
     <div className='todo'>
@@ -28,6 +24,7 @@ export default function Todo({ todo, categories, onEditTodo }) {
           <button onClick={() => setIsEditing(isEditing => !isEditing)}>
             Edit todo
           </button>
+          <button onClick={handleDeleteClick}>Delete</button>
         </div>
       </>
     )}
