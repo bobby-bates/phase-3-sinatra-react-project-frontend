@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 export default function EditTodo({ todo, onEditTodo }) {
   const [editTodoBody, setEditTodoBody] = useState(todo.body)
-  // debugger
   const handleSubmit = e => {
     e.preventDefault()
     fetch(`http://localhost:9292/todos/${todo.id}`, {
