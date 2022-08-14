@@ -5,7 +5,6 @@ body {
 .app {
   text-align: center;
   background: lightgray;
-  /* padding: 0.5rem; */
 }
 
 .header {
@@ -18,31 +17,22 @@ body {
 
 .todo {
   background: slategray;
-  /* padding-bottom: 2rem 0; */
-}
-
-.todo#todo-body {
-  /* margin-top: 0.5rem; */
 }
 
 .new-todo-form {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  /* width: 50%; */
   background: cyan;
   padding: 0.5rem 0;
 }
 
 .new-todo-form-child {
-  /* flex: 0 0 50%; */
   width: 50%;
 }
 
 .edit-todo {
   display: inline-flex;
-  /* justify-content: space-evenly; */
-  /* height: 5rem; */
   padding-top: 0.7rem;
   margin: 1rem 0;
 }
