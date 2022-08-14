@@ -1,20 +1,25 @@
 import { useState } from 'react'
 import EditTodo from './EditTodo'
 
-export default function Todo({ todo, categories, onUpdateTodo }) {
+export default function Todo({ todo, categories, onEditTodo }) {
   const [isEditing, setIsEditing] = useState(false)
   // debugger
+  // const handleEditTodo = (props) => {
+  //   debugger
+  //   setIsEditing(false)
+  //   // onEditTodo(updatedTodo)
+  // }
 
-  const handleUpdateTodo = (updatedTodo) => {
-    setIsEditing(false)
-    onUpdateTodo(updatedTodo)
-
-  }
+  // function handleEditTodo(updatedTodo, onEditTodo) {
+  //   setIsEditing(false)
+  //   debugger
+  //   onEditTodo(updatedTodo)
+  // }
 
   return (
     <div className='todo'>
     {isEditing ? (
-      <EditTodo todo={todo} onUpdateTodo={handleUpdateTodo} />
+      <EditTodo todo={todo} onEditTodo={onEditTodo} />
     ) : (
       <>
         <p id='todo-body'>{todo.body}</p>
